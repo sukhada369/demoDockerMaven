@@ -247,7 +247,7 @@
     <configuration>
         <echo message="  $${git.commit.id.describe}:     ${git-commit-id.commit.id.describe}" />
         <dockerDirectory>${project.basedir}</dockerDirectory>
-        <imageName>sukhi:${git.commit.id.abbrev}</imageName>
+        <imageName>sukhi:${git.commit.id}</imageName>
     </configuration>
     </plugin>
 </plugins>
