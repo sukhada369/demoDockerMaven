@@ -264,6 +264,21 @@
         <echo message="  $${git.commit.id.describe}:     ${git-commit-id.commit.id.describe}" />
         <dockerDirectory>${project.basedir}</dockerDirectory>
         <imageName>sukhada</imageName>
+
+
+               <resources>        <!-- Dockerfile building resources -->
+                    <resource>
+                        <targetPath>/</targetPath>
+                        <directory>.</directory>
+                        <excludes>
+                            <exclude>target/**/*</exclude>
+                            <exclude>pom.xml</exclude>
+                            <exclude>*.iml</exclude>
+                        </excludes>
+                    </resource>
+                </resources>
+
+
     </configuration>
     </plugin>
 </plugins>
